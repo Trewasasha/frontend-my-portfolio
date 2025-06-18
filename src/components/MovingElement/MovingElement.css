@@ -1,0 +1,8 @@
+.celestial-body {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  will-change: top, background-color, box-shadow;
+  transition-property: top, background-color, box-shadow, width, height;
+  z-index: 0;
+}

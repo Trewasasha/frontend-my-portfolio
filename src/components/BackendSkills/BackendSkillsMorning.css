@@ -1,0 +1,30 @@
+@font-face {
+  font-family: 'Tricker-Regular';
+  src: url('../../fonts/Thicker-Regular-TRIAL.woff') format('woff2');
+  font-family: 'Tricker-Bold';
+  src: url('../../fonts/Thicker-Bold-TRIAL.ttf') format('ttf');
+}
+
+.morning-backend-skills {
+  max-width: 900px;
+  width: 70vw; 
+  margin: 39vh auto 5vh; 
+  padding: 20px;
+  color: white;
+  font-family: 'Tricker-Regular';
+}
+/* HelveticaNeueLT W1G 95 Blk */
+.morning-skill-section {
+    margin-bottom: 40px;
+    width: 100%; 
+}
+
+.morning-skill-section h3 {
+  display: flex;
+  justify-content: center;
+  font-size: 2rem;
+  font-family: 'Tricker-Bold';
+  font-weight: 900;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}

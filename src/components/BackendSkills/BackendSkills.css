@@ -1,0 +1,29 @@
+@font-face {
+  font-family: 'Rounded';
+  src: url('../../fonts/houschkarounded_bold.woff') format('woff2');
+
+}
+.skill-about {
+  font-size: 1.5rem;
+}
+
+.backend-title {
+    font-family: 'Fredoka One (RUS BY ME)';
+    font-size: 7vw;
+    margin: 0;
+    text-align: center;
+}
+
+.backend-subtitle {
+  font-family: 'Fredoka One (RUS BY ME)';
+  margin: 0;
+  text-align: center;
+}
+
+  
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+  

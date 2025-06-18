@@ -1,0 +1,17 @@
+.night-contacts {
+  max-width: 900px;
+  width: 70vw;
+  margin: 39vh auto 5vh;
+  padding: 20px;
+  color: white;
+  font-family: 'Rounded';
+  border-radius: 30px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.night-contacts h2 {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 40px;
+  color: #4CAF50;
+}

@@ -1,0 +1,27 @@
+.app-footer a {
+    color: rgb(11, 37, 12);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+  
+.app-footer a:hover {
+    color: #FFD700;
+}
+  
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px;
+}
+
+/* Общие стили для мобильных устройств */
+@media (max-width: 768px) {
+    .footer-content {
+        padding: 10px;
+    }
+    
+    .footer-content p {
+        font-size: 14px;
+        margin: 8px 0;
+    }
+}

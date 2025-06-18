@@ -1,0 +1,110 @@
+@font-face {
+  font-family: 'Rounded';
+  src: url('../../fonts/houschkarounded_bold.woff') format('woff2');
+}
+.chatbot-wrapper {
+  max-width: 800px;
+  margin: 30px auto;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.react-chatbot-kit-chat-container {
+  width: 100% !important;
+  border-radius: 15px !important;
+}
+
+.react-chatbot-kit-chat-message-container {
+  padding: 15px !important;
+  height: 400px !important;
+}
+
+.react-chatbot-kit-chat-bot-message {
+  margin-left: 0 !important;
+  max-width: 80% !important;
+  background-color: #4CAF50 !important;
+  color: white !important;
+  border-radius: 15px 15px 15px 0 !important;
+}
+
+.react-chatbot-kit-chat-bot-message-arrow {
+  border-right: 8px solid #4CAF50 !important;
+}
+
+.react-chatbot-kit-chat-input {
+  border-radius: 15px !important;
+  padding: 15px !important;
+}
+
+.react-chatbot-kit-chat-btn-send {
+  background-color: #4CAF50 !important;
+  border-radius: 15px !important;
+}
+.contacts-title {
+  font-family: 'Fredoka One (RUS BY ME)';
+  font-size: 7vw;
+  margin: 0;
+  text-align: center;
+}
+
+.contact-subtitle {
+  font-family: 'Fredoka One (RUS BY ME)';
+  margin: 0;
+  text-align: center;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group label {
+  font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-family: inherit;
+}
+
+.submit-btn {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  align-self: flex-end;
+}
+
+.success-message {
+  padding: 20px;
+  text-align: center;
+  font-weight: bold;
+  color: #4CAF50;
+}
+
+.additional-info {
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.error-message {
+  color: #ff4444;
+  background-color: #ffebee;
+  padding: 15px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  border: 1px solid #ff4444;
+}

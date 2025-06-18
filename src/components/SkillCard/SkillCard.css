@@ -1,0 +1,135 @@
+/* Базовые стили для карточки */
+.morning-skill-card,
+.day-skill-card,
+.sunset-skill-card,
+.night-skill-card {
+    padding: 20px;
+    border-radius: 8px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    min-height: 150px;
+    cursor: pointer;
+}
+
+/* Цвета для разных тем */
+.morning-skill-card {
+    background: #96df8fa6;
+
+}
+
+.day-skill-card {
+    background-color: rgb(253, 183, 54);
+}
+
+
+.sunset-skill-card {
+    background: #4CAF50;
+}
+
+.night-skill-card {
+    background: #ffffff1a;
+}
+
+/* Стили при наведении */
+.morning-skill-card.hovered,
+.day-skill-card.hovered,
+.sunset-skill-card.hovered {
+    transform: translateY(-5px);
+}
+
+.night-skill-card.hovered {
+    background: #ffffff1a;
+    transform: translateY(-5px);
+}
+
+/* Контент карточки */
+.skill-card-content {
+    transition: all 0.3s ease;
+}
+
+.hovered .skill-card-content {
+    transform: translateY(-10px);
+}
+
+/* Заголовки */
+.morning-skill-card h4,
+.day-skill-card h4,
+.sunset-skill-card h4 {
+    margin-top: 0;
+    color: rgb(255, 255, 255);
+    font-size: 1.5rem;
+}
+
+.night-skill-card h4 {
+    margin-top: 0;
+    color: #f5f5f5;
+}
+
+
+/* Уровень навыка */
+.morning-skill-level,
+.day-skill-level,
+.sunset-skill-level {
+    color: rgb(43, 43, 43);
+    font-size: 1.3rem;
+    margin: 10px 0;
+}
+
+.night-skill-level {
+    color: #FFD700;
+    font-size: 1.3rem;
+    margin: 10px 0;
+}
+
+.morning-skill-level .filled,
+.day-skill-level .filled,
+.sunset-skill-level .filled,
+.night-skill-level .filled {
+    color: #FFD700;
+}
+
+/* Описание навыка */
+.skill-description {
+    color: #f5f5f5;
+    margin-bottom: 0;
+    line-height: 1.5;
+    transition: all 0.3s ease;
+}
+
+.hovered .skill-description {
+    opacity: 0.8;
+}
+
+/* Детали при наведении */
+.skill-details {
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 15px ;
+    border-radius: 10px;
+    animation: fadeIn 0.3s ease-out;
+}
+
+.skill-details p {
+    margin: 0;
+    color: white;
+    font-size: 0.9em;
+    line-height: 1.4;
+}
+
+/* Анимация */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Для светлых тем */
+.morning-skill-card .skill-details,
+.day-skill-card .skill-details,
+.sunset-skill-card .skill-details {
+    background: rgba(0, 0, 0, 0.6);
+}

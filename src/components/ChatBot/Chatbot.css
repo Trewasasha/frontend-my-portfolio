@@ -1,0 +1,146 @@
+@font-face {
+  font-family: 'Rounded';
+  src: url('../../fonts/houschkarounded_bold.woff') format('woff2');
+  font-family: 'Tricker-Regular';
+  src: url('../../fonts/Thicker-Regular-TRIAL.woff') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+} 
+
+.chatbot-container {
+  width: 90%;
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  background: #ffffff1a;
+  border-radius: 10px;
+  backdrop-filter: blur(5px);
+  display: flex;
+  flex-direction: column;
+  height: 80vh;
+}
+
+.chatbot-messages {
+  flex: 1;
+  padding: 10px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.message {
+  max-width: 80%;
+  padding: 0 15px;
+  margin-bottom: 8px;
+  border-radius: 18px;
+  word-wrap: break-word;
+  line-height: 1.4;
+}
+
+.message.user {
+  border-radius: 18px 18px 4px 18px;
+  background-color: #e0f7fa;
+  font-family: "Tricker-Regular";
+  color: #333;
+  align-self: flex-end;
+}
+
+.message.bot {
+  border-radius: 18px 18px 18px 4px;
+  background-color: #f0f0f0;
+  font-family: "Tricker-Regular";
+  color: #333;
+  align-self: flex-start;
+}
+
+.chatbot-input {
+  display: flex;
+  padding: 10px 0 0;
+  margin-top: 10px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.chatbot-input input {
+  flex: 1;
+  padding: 12px;
+  margin-right: 25px;
+  border: none;
+  border-radius: 20px;
+  outline: none;
+  font-size: 16px;
+}
+
+.chatbot-input button {
+  padding: 0 20px;
+  background-color: #575757e6;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  outline: none;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.chatbot-input button:hover {
+  background-color: #575757e6;
+}
+
+.chatbot-input button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+/* Адаптация для мобильных */
+@media (max-width: 768px) {
+  .chatbot-container {
+    width: 95%;
+    height: 70vh;
+    margin: 10px auto;
+    padding: 15px;
+  }
+  
+  .message {
+    max-width: 90%;
+    padding: 0 12px;
+  }
+}
+
+.quick-replies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 10px 0;
+  margin-bottom: 10px;
+}
+
+.quick-reply-btn {
+  padding: 8px 12px;
+  background-color: #575757e6;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.3s;
+  white-space: nowrap;
+}
+
+.quick-reply-btn:hover {
+  background-color: #575757e6;
+  transform: translateY(-2px);
+}
+
+/* Адаптация для мобильных */
+@media (max-width: 768px) {
+  .quick-replies {
+    gap: 6px;
+  }
+  
+  .quick-reply-btn {
+    padding: 6px 10px;
+    font-size: 12px;
+  }
+}

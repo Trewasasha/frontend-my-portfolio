@@ -1,0 +1,222 @@
+/* === Шрифты === */
+@font-face {
+  font-family: 'Rounded';
+  src: url('../../fonts/houschkarounded_bold.woff') format('woff2');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Tricker-Regular';
+  src: url('../../fonts/Thicker-Regular-TRIAL.woff') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+/* === Основная структура === */
+.about-content-wrapper {
+  display: flex;
+  gap: 20px;
+  width: 100%;
+  flex-flow: row nowrap;
+  align-content: flex-start;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.about-text-btn {
+  display: flex;
+  flex-flow: column;
+  width: 100%;
+}
+
+.about-text {
+  align-self: flex-start;
+}
+
+.about-text p {
+  margin: 0 0.5em;
+  font-size: clamp(0.95rem, 1.2vw, 1.1rem);
+  line-height: 1.6;
+}
+
+.about-text p+p {
+  margin-top: 1em;
+}
+
+/* === Кнопки === */
+.about-buttons {
+  display: flex;
+  flex-flow: column wrap;
+  align-content: flex-start;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.about-button {
+  display: flex;
+  padding: 10px 15px;
+  /* background-color: rgba(30, 30, 30, 0.7); */
+  color: white;
+  border-radius: 20px;
+  text-decoration: none;
+  font-size: 0.9em;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.about-button:hover {
+  background-color: rgba(50, 50, 50, 0.9);
+  transform: translateY(-2px);
+}
+
+/* Светлая тема */
+.morning-about-background .about-button,
+.day-about-background .about-button {
+  /* background-color: rgba(255, 255, 255, 0.7); */
+  color: rgb(43, 43, 43);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+
+
+
+/* === Изображение === */
+.about-image {
+  flex: 1;
+  min-width: 300px;
+  max-width: 500px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  width: 100%;
+}
+
+.about-image img {
+  width: 100%;
+  max-height: 500px;
+  border-radius: 15px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.about-image img:hover {
+  transform: scale(1.05);
+}
+
+
+/* === Секция возможностей === */
+.capabilities {
+  width: 100%;
+  margin-top: 40px;
+  padding: 20px 0;
+  background-color: rgba(30, 30, 30, 0.2);
+  border-radius: 15px;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-right: 15px;
+}
+
+.capabilities h2 {
+  margin-bottom: 20px;
+  font-size: clamp(1.2rem, 2.5vw, 1.8rem);
+  color: white;
+}
+
+.capabilities ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.capabilities li {
+  flex: 1 1 calc(50% - 15px);
+  padding: 15px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  color: white;
+  font-size: clamp(0.95rem, 1.1vw, 1.05rem);
+}
+
+/* Светлая тема для возможностей */
+.morning-about-background .capabilities,
+.day-about-background .capabilities {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.morning-about-background .capabilities h2,
+.day-about-background .capabilities h2,
+.morning-about-background .capabilities li,
+.day-about-background .capabilities li {
+  color: #333;
+}
+
+.morning-about-background .capabilities li,
+.day-about-background .capabilities li {
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+
+/* === Адаптивность === */
+@media (max-width: 1024px) {
+  .about-content-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about-text-btn {
+    width: 100%;
+  }
+
+  .about-image {
+    width: 100%;
+    max-width: 400px;
+    margin-top: 20px;
+  }
+
+  .about-buttons {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .about-button {
+    flex: 1 1 auto;
+    text-align: center;
+  }
+
+  .capabilities li {
+    flex: 1 1 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .about-buttons {
+    flex-direction: column;
+    gap: 8px;
+    margin-right: 7vw;
+  }
+
+  .about-button {
+    width: 100%;
+  }
+
+  .capabilities li {
+    font-size: 0.95rem;
+    padding: 12px;
+  }
+
+  .capabilities {
+    padding: 10px 0;
+  }
+
+  .about-image img {
+    max-height: 300px;
+  }
+}

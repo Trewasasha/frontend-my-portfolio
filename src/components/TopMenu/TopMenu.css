@@ -1,0 +1,144 @@
+@font-face {
+  font-family: 'Fredoka One (RUS BY ME)';
+  src: url('../../fonts/FredokaOneRUSBYME-Regular.woff2') format('woff2'),
+       url('../../fonts/FredokaOneRUSBYME-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Rounded';
+  src: url('../../fonts/houschkarounded_bold.woff') format('woff');
+}
+
+/* === БАЗОВЫЕ СТИЛИ (МОБИЛЬНЫЕ) === */
+
+.morning-background,
+.day-background,
+.sunset-background,
+.night-background {
+  position: relative;
+  width: 100%;
+  padding: 6px 0;
+  font-family: 'Rounded';
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  z-index: 1000;
+  background: transparent;
+}
+
+.morning-menu-title,
+.day-menu-title,
+.sunset-menu-title,
+.night-menu-title {
+  font-weight: bold;
+  font-size: 1.3rem;
+  transition: color 0.3s;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  text-align: center;
+}
+
+.menu-left,
+.menu-right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4vw;
+  transition: none;
+}
+
+.menu-left.left-scrolled,
+.menu-right.right-scrolled {
+  transform: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  transition: none;
+}
+
+.menu-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 4vw;
+}
+.menu-item:hover .night-menu-title {
+  color: #575757e6 ;
+}
+
+.menu-item:hover .morning-menu-title,
+.menu-item:hover .day-menu-title,
+.menu-item:hover .sunset-menu-title {
+  color: #5c7cd4;
+}
+
+
+/* === МАЛЕНЬКИЕ ЭКРАНЫ ДО 480px === */
+
+@media (max-width: 480px) {
+  .menu-list {
+    justify-content: center;
+  }
+
+  .menu-item {
+    margin: 0 3px;
+    padding: 5px 8px;
+    font-size: 0.9rem;
+  }
+}
+
+/* === ДЕСКТОПНЫЕ СТИЛИ ОТ 768px === */
+
+@media (min-width: 768px) {
+  .morning-background,
+  .day-background,
+  .sunset-background,
+  .night-background {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 95vw;
+    max-width: 900px;
+    padding: 8px 0;
+    transition: all 0.3s ease;
+  }
+
+  .morning-menu-title,
+  .day-menu-title,
+  .sunset-menu-title,
+  .night-menu-title {
+    font-size: 2rem;
+  }
+
+  .menu-left,
+  .menu-right {
+    flex-direction: row;
+    gap: 5vw;
+    transition: transform 0.3s ease;
+  }
+
+  .menu-left.left-scrolled {
+    transform: translateX(-36vw);
+    flex-direction: column;
+    transition-delay: 0.1s;
+  }
+
+  .menu-right.right-scrolled {
+    transform: translateX(36vw);
+    flex-direction: column;
+    transition-delay: 0.1s;
+  }
+
+  .menu-list {
+    flex-direction: row;
+    gap: 5vw;
+  }
+}

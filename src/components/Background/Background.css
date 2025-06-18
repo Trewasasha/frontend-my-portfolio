@@ -1,0 +1,78 @@
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  transition: background 60s ease-in-out;
+  overflow: hidden;
+}
+
+.morning-gradient {
+  background: linear-gradient(to bottom, #ff7e5f, #feb47b);
+}
+
+.day-gradient {
+  background: linear-gradient(to bottom, #a7d9ed, #86c1e9);
+}
+
+.sunset-gradient {
+  background: linear-gradient(to bottom, #5b6ea3, #3a4a6b);
+}
+
+.night-gradient {
+  background: linear-gradient(to bottom, #2c3e50, #1a2530);
+}
+
+.star {
+  position: absolute;
+  background-color: white;
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translateZ(0);
+  will-change: opacity;
+  animation: twinkle var(--duration, 2s) infinite alternate ease-in-out;
+  animation-delay: var(--delay, 0s);
+}
+
+@keyframes twinkle {
+  0%, 100% {
+    opacity: 0.3;
+    transform: scale(0.9);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+}
+
+.meteor {
+  position: absolute;
+  width: 120px;
+  height: 2px;
+  background: linear-gradient(to right, rgba(255,255,255,0), white);
+  border-radius: 50%;
+  transform: rotate(var(--angle, 45deg));
+  transform-origin: left;
+  pointer-events: none;
+  animation: meteor-fall var(--duration, 3s) linear infinite;
+  animation-delay: var(--delay, 0s);
+  opacity: 0;
+}
+
+
+
+@keyframes meteor-fall {
+  0% {
+    transform: rotate(var(--angle, 45deg)) translateX(0) translateY(0);
+    opacity: 1;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(var(--angle, 45deg)) translateX(300px) translateY(300px);
+    opacity: 0;
+  }
+}

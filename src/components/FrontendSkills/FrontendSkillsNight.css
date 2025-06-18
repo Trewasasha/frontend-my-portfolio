@@ -1,0 +1,34 @@
+@font-face {
+    font-family: 'Tricker-Regular';
+    src: url('../../fonts/Thicker-Regular-TRIAL.woff') format('woff2');
+}
+
+.night-front-skills {
+    max-width: 900px;
+    width: 70vw;
+    margin: 39vh auto 5vh;
+    padding: 20px;
+    color: white;
+    font-family: 'Tricker-Regular';
+    /* background: rgba(30, 30, 30, 0.9);1 */
+    border-radius: 30px;
+    backdrop-filter: blure(5px);
+}
+
+.night-front-skills h2 {
+    font-size: 5rem;
+    text-align: center;
+    margin-bottom: 40px;
+    color: #4CAF50;
+}
+
+.day-skill-section {
+    margin-bottom: 40px;
+}
+
+.day-skill-section h3 {
+    font-size: 1.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}

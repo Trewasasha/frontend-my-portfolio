@@ -1,0 +1,23 @@
+@font-face {
+  font-family: 'Rounded';
+  src: url('../../fonts/houschkarounded_bold.woff') format('woff2');
+  font-family: 'Tricker-Regular';
+  src: url('../../fonts/Thicker-Regular-TRIAL.woff') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+.sunset-about-background {
+    max-width: 900px;
+    width: 70vw; /* Добавляем относительную ширину */
+    margin: 39vh auto 5vh; /* Изменяем отступы: сверху 10vh, по бокам auto, снизу 5vh */
+    padding: 20px;
+    color: white;
+    font-family: 'Tricker-Regular';
+    font-size: 1.3em;
+    background: rgba(30, 30, 30, 0.9);
+    border-radius: 30px;
+    backdrop-filter: blur(5px);
+    gap: 20px;
+} 

@@ -1,0 +1,30 @@
+.sunset-contacts {
+    max-width: 900px;
+    width: 70vw;
+    margin: 39vh auto 5vh;
+    padding: 20px;
+    color: white;
+    background: rgba(30, 30, 30, 0.9);
+    border-radius: 30px;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  }
+  
+  .sunset-contacts h2 {
+    font-size: 5rem;
+    text-align: center;
+    margin-bottom: 40px;
+    color: #4CAF50;
+  }
+  
+  .sunset-contacts .submit-btn {
+    background-color: #4CAF50;
+    color: white;
+  }
+  
+  .sunset-contacts input,
+  .sunset-contacts textarea {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    border-color: rgba(255, 255, 255, 0.3);
+  }

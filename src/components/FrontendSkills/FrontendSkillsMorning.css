@@ -1,0 +1,37 @@
+@font-face {
+    font-family: 'Tricker-Regular';
+    src: url('../../fonts/Thicker-Regular-TRIAL.woff') format('woff2');
+    font-family: 'Tricker-Bold';
+  src: url('../../fonts/Thicker-Bold-TRIAL.ttf') format('ttf');
+}
+
+.morning-front-skills {
+    max-width: 900px;
+    width: 70vw;
+    margin: 39vh auto 5vh;
+    padding: 20px;
+    color:rgb(255, 255, 255);
+    font-family: 'Tricker-Regular';
+    border-radius: 30px;
+    backdrop-filter: blure(5px);
+}
+
+.morning-front-skills h2 {
+    font-size: 5rem;
+    text-align: center;
+    margin-bottom: 40px;
+    color: #4CAF50;
+}
+
+.morning-skill-section {
+    margin-bottom: 40px;
+}
+
+.morning-skill-section h3 {
+    font-size: 2.5rem;
+    font-weight: 900;
+    font-family: 'Tricker-Bold';
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
