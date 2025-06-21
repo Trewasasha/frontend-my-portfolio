@@ -1,17 +1,15 @@
 @font-face {
-    font-family: 'Rounded';
-    src: url('../../fonts/houschkarounded_bold.woff') format('woff2');
-  
+    font-family: 'Tricker-Regular';
+    src: url('../../fonts/Thicker-Regular-TRIAL.woff') format('woff2');
 }
 
 .sunset-app-footer {
     width: 70vw;
     max-width: 900px; 
     margin: 0 auto; 
-    padding: 20px;
     color: white;
     text-align: center;
-    font-family:'Rounded';
+    font-family:'Tricker-Regular';
     position: relative;
     margin-top: 40px; 
 }

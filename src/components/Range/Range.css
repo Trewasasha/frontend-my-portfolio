@@ -4,84 +4,175 @@
     transform: translateX(-50%);
     width: 90vw;
     max-width: 900px;
-  }
-  
-  .ruler {
+}
+
+.ruler {
     display: flex;
     justify-content: space-between;
     position: relative;
-  }
-  
-  .ruler-tick {
+}
+
+.ruler-tick {
     position: relative;
     flex: 1;
     text-align: center;
-  }
-  
-  /* Большие деления (каждое четное) */
-  .ruler-tick:nth-child(2n)::before {
+}
+
+/* Общие стили для делений */
+.ruler-tick::before {
     content: '';
     position: absolute;
     left: 50%;
+    border-radius: 25% 25% 0 0;
+    transform: translateX(-50%);
+}
+
+/* Большие деления */
+.ruler-tick:nth-child(2n)::before {
     top: 0;
     width: 3px;
     height: 25px;
-    border-radius: 25% 25% 0 0;
-    background: #fd6767;
-    transform: translateX(-50%);
-  }
-  
-  /* Маленькие деления (каждое нечетное) */
-  .ruler-tick:nth-child(2n+1)::before {
-    content: '';
-    position: absolute;
-    left: 50%;
+}
+
+/* Маленькие деления */
+.ruler-tick:nth-child(2n+1)::before {
     top: 10px;
     width: 2px;
     height: 15px;
-    border-radius: 25% 25% 0 0;
-    background: #fd6767;
     opacity: 0.7;
-    transform: translateX(-50%);
-  }
-  
-  .ruler-slider {
+}
+
+/* Цвета для разных тем */
+.morning-ruler .ruler-tick::before {
+    background: #96df8f;
+}
+.day-ruler .ruler-tick::before {
+    background: #fdb736;
+}
+.sunset-ruler .ruler-tick::before {
+    background: #4CAF50;
+}
+.night-ruler .ruler-tick::before {
+    background: #FFD700;
+}
+
+.ruler-slider {
     appearance: none; 
     width: 100%;
     height: 8px;
     background: transparent;
     outline: none;
     margin: 0;
-  }
-  
-  .ruler-slider::-webkit-slider-thumb {
+}
+
+/* Стили для ползунка в разных темах */
+.morning-ruler .ruler-slider::-webkit-slider-thumb {
+    background: #96df8f;
+    border: 2px solid #fff;
+}
+.day-ruler .ruler-slider::-webkit-slider-thumb {
+    background: #fdb736;
+    border: 2px solid #fff;
+}
+.sunset-ruler .ruler-slider::-webkit-slider-thumb {
+    background: #4CAF50;
+    border: 2px solid #fff;
+}
+.night-ruler .ruler-slider::-webkit-slider-thumb {
+    background: #FFD700;
+    border: 2px solid #333;
+}
+
+.ruler-slider::-webkit-slider-thumb {
     -webkit-appearance: none;
     width: 24px;
     height: 24px;
     border-radius: 50%;
-    background: #000000;
     cursor: pointer;
     position: relative;
     margin-top: -5px;
     z-index: 2;
-  }
-  
-  .ruler-slider::-webkit-slider-runnable-track {
+    transition: all 0.2s ease;
+}
+
+.ruler-slider::-webkit-slider-thumb:hover {
+    transform: scale(1.1);
+}
+
+.ruler-slider::-webkit-slider-runnable-track {
     background: transparent;
     height: 8px;
-  }
-  
-  .ruler-slider::-moz-range-thumb {
+}
+
+/* Для Firefox */
+.ruler-slider::-moz-range-thumb {
     width: 24px;
     height: 24px;
     border-radius: 50%;
-    background: #000000;
     cursor: pointer;
     position: relative;
     z-index: 2;
-  }
-  
-  .ruler-slider::-moz-range-track {
+    border: none;
+    transition: all 0.2s ease;
+}
+
+.morning-ruler .ruler-slider::-moz-range-thumb {
+    background: #96df8f;
+    border: 2px solid #fff;
+}
+.day-ruler .ruler-slider::-moz-range-thumb {
+    background: #fdb736;
+    border: 2px solid #fff;
+}
+.sunset-ruler .ruler-slider::-moz-range-thumb {
+    background: #4CAF50;
+    border: 2px solid #fff;
+}
+.night-ruler .ruler-slider::-moz-range-thumb {
+    background: #FFD700;
+    border: 2px solid #333;
+}
+
+.ruler-slider::-moz-range-track {
     background: transparent;
     height: 8px;
-  }
+}
+
+/* Мобильная адаптация */
+@media (max-width: 768px) {
+    .ruler-container {
+        width: 95vw;
+    }
+    
+    .ruler-tick:nth-child(2n)::before {
+        height: 20px;
+    }
+    
+    .ruler-tick:nth-child(2n+1)::before {
+        height: 12px;
+        top: 12px;
+    }
+    
+    .ruler-slider::-webkit-slider-thumb,
+    .ruler-slider::-moz-range-thumb {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .ruler-tick:nth-child(2n)::before {
+        height: 18px;
+    }
+    
+    .ruler-tick:nth-child(2n+1)::before {
+        height: 10px;
+        top: 14px;
+    }
+    
+    .ruler-slider::-webkit-slider-thumb,
+    .ruler-slider::-moz-range-thumb {
+        width: 18px;
+        height: 18px;
+    }
+}

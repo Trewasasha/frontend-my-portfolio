@@ -10,8 +10,8 @@
   
 .morning-about-background {
     max-width: 900px;
-    width: 70vw; /* Добавляем относительную ширину */
-    margin: 39vh auto 5vh; /* Изменяем отступы: сверху 10vh, по бокам auto, снизу 5vh */
+    width: 70vw; 
+    margin: 39vh auto 5vh; 
     padding: 20px;
     color: rgb(43, 43, 43);
     font-family: 'Tricker-Regular';
